@@ -14,11 +14,11 @@
     ],
     "dependencies" : {
     },
-    "main" : "index",
+    "main" : "hiconcept",
     "files" : [
         "Readme.md",
         "LICENSE",
-        "index.js",
+        "hiconcept",
         "config/",
         "lib/"
     ],

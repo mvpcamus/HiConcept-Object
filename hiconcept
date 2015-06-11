@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+"use strict";
+
+global._homePath = __dirname;
+
+var config = require(_homePath+'/config/config.json');
+var publish = require(_homePath+'/lib/publish.js');
+var subscribe = require(_homePath+'/lib/subscribe.js');
+
+config.auth = config.name+':'+config.uuid;
+delete config.name;
+delete config.uuid;
+config.path = '/topics/'+config.topic;
+delete config.topic;
+
+var arg = process.argv[2];
+if (arg == '-p' || arg == '--publish') {
+    if (typeof process.argv[3] == 'string') {
+        var contents = process.argv[3];
+        try {
+            contents = JSON.parse(contents);
+        } catch (e) {
+            console.log('JSON Syntax ERROR');
+            console.log(e);
+            process.exit(1);
+        }
+        publish(config, contents);
+    } else {
+        console.log('No data to publish');
+    }
+} else if (arg == '-s' || arg == '--subscribe') {
+    subscribe(config);
+} else {
+    console.log('Usage: index.js [OPTION] [JSON string]')
+    console.log('Options:')
+    console.log('  -p, --publish        publish (POST) [JSON] data');
+    console.log('  -s, --subscribe      subscribe (GET) data');
+}
