@@ -1,0 +1,8 @@
+{
+    "protocol": "https",
+    "host": "hiconcept.etri.re.kr",
+    "port": 9994,
+    "name": "test.1",
+    "uuid": "1111",
+    "topic": "555eb23a1fae6c4d0db1a0c8"
+}

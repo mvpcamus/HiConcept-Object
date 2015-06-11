@@ -1,0 +1,30 @@
+{
+    "name" : "HiConcept-CMF-Object",
+    "version" : "0.0.1",
+    "description" : "HiConcept Context Management Framework Object Adapter",
+    "author" : {
+        "name" : "Jun Jo",
+        "email" : "camus@kaist.ac.kr"
+    },
+    "contributors" : [
+        {
+            "name" : "",
+            "email" : ""
+        }
+    ],
+    "dependencies" : {
+    },
+    "main" : "index",
+    "files" : [
+        "Readme.md",
+        "LICENSE",
+        "index.js",
+        "config/",
+        "lib/"
+    ],
+    "engines" : {
+        "node" : ">= 0.12.4"
+    },
+    "directories" : {},
+    "readme" : "README.md"
+}
