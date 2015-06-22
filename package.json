@@ -14,7 +14,7 @@
     ],
     "dependencies" : {
     },
-    "main" : "hiconcept",
+    "main" : "index",
     "files" : [
         "Readme.md",
         "LICENSE",

@@ -26,12 +26,12 @@ if (arg == '-p' || arg == '--publish') {
         }
         publish(config, contents);
     } else {
-        console.log('No data to publish');
+        console.log('No JSON data to publish');
     }
 } else if (arg == '-s' || arg == '--subscribe') {
     subscribe(config);
 } else {
-    console.log('Usage: index.js [OPTION] [JSON string]')
+    console.log('Usage: hiconcept [OPTION] [JSON string]')
     console.log('Options:')
     console.log('  -p, --publish        publish (POST) [JSON] data');
     console.log('  -s, --subscribe      subscribe (GET) data');
