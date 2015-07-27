@@ -1,5 +1,5 @@
 {
-    "name" : "HiConcept-CMF-Object",
+    "name" : "HiConcept-Object",
     "version" : "0.0.1",
     "description" : "HiConcept Context Management Framework Object Adapter",
     "author" : {
@@ -23,7 +23,7 @@
         "lib/"
     ],
     "engines" : {
-        "node" : ">= 0.12.4"
+        "node" : ">= 0.12.7"
     },
     "directories" : {},
     "readme" : "README.md"

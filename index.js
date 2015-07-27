@@ -14,5 +14,5 @@ exports.sub = function() {
 }
 
 exports.pub = function(content) {
-    publish(config, contents);
+    publish(config, content);
 }
