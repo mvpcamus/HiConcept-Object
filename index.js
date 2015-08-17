@@ -9,10 +9,10 @@ delete config.uuid;
 config.path = '/topics/'+config.topic;
 delete config.topic;
 
-exports.sub = function() {
-    subscribe(config);
+exports.sub = function(callback) {
+    subscribe(config, callback);
 }
 
-exports.pub = function(content) {
-    publish(config, content);
+exports.pub = function(content, callback) {
+    publish(config, content, callback);
 }
