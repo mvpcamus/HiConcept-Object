@@ -1,6 +1,6 @@
 {
     "name" : "HiConcept-Object",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "description" : "HiConcept Context Management Framework Object Adapter",
     "author" : {
         "name" : "Jun Jo",
