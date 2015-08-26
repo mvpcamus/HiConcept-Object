@@ -8,11 +8,12 @@
     },
     "contributors" : [
         {
-            "name" : "",
-            "email" : ""
+            "name" : "Jae-Keun Kim",
+            "email" : "mrbingo@lutes.co.kr"
         }
     ],
     "dependencies" : {
+        "ws" : ">=0.8.0"
     },
     "main" : "index",
     "files" : [

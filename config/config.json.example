@@ -1,8 +1,9 @@
 {
     "protocol": "https",
-    "host": "hiconcept.etri.re.kr",
-    "port": 9994,
-    "name": "test.1",
-    "uuid": "1111",
-    "topic": "555eb23a1fae6c4d0db1a0c8"
+    "host": "hostaddress",
+    "port": 443,
+    "name": "object_id",
+    "uuid": "object_uuid",
+    "topic": "",
+    "selfsigned" : false
 }
