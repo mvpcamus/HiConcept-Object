@@ -1,23 +1,55 @@
 "use strict";
-var config = require(__dirname+'/config/config.json');
 var publish = require(__dirname+'/lib/publish.js');
 var subscribe = require(__dirname+'/lib/subscribe.js');
 var websocket = require(__dirname+'/lib/websocket.js');
 
-config.auth = config.name+':'+config.uuid;
-delete config.name;
-delete config.uuid;
-config.path = '/topics/'+config.topic;
-delete config.topic;
+var defaultConf = {
+    protocol: "http",
+    selfSignedCert: false,
+    host: "localhost",
+    port: 80,
+    name: null,
+    uuid: null,
+    topic: null
+};
 
-exports.sub = function(callback) {
-    subscribe(config, callback);
+function setConf(config) {
+    if(!config) {
+        config = defaultConf;
+    }
+
+    if(config.name && config.uuid) {
+        config.auth = config.name+':'+config.uuid;
+    } else if(config.auth !== undefined) {
+        //nothing to do
+    } else {
+        config.auth = null;
+    }
+    if(config.topic) {
+        config.path = '/topics/'+config.topic;
+    } else if(config.path !== undefined) {
+        //nothing to do
+    } else {
+        config.path = null;
+    }
+    delete config.name;
+    delete config.uuid;
+    delete config.topic;
+
+    return config;
 }
 
-exports.pub = function(content, callback) {
+exports.pub = function(config, content, callback) {
+    config = setConf(config);
     publish(config, content, callback);
 }
 
-exports.ws = function(callback) {
+exports.sub = function(config, callback) {
+    config = setConf(config);
+    subscribe(config, callback);
+}
+
+exports.ws = function(config, callback) {
+    config = setConf(config);
     return websocket(config, callback);
 }

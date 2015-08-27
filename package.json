@@ -20,7 +20,7 @@
         "Readme.md",
         "LICENSE",
         "hiconcept",
-        "config/",
+        "index.js",
         "lib/"
     ],
     "engines" : {

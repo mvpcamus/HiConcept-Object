@@ -1,9 +1,0 @@
-{
-    "protocol": "https",
-    "host": "hostaddress",
-    "port": 443,
-    "name": "object_id",
-    "uuid": "object_uuid",
-    "topic": "",
-    "selfsigned" : false
-}
