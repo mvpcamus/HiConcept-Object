@@ -30,7 +30,7 @@ function setConf(config) {
     } else if(config.path !== undefined) {
         //nothing to do
     } else {
-        config.path = null;
+        config.path = '/topics/';
     }
     delete config.name;
     delete config.uuid;
@@ -44,9 +44,9 @@ exports.pub = function(config, content, callback) {
     publish(config, content, callback);
 }
 
-exports.sub = function(config, callback) {
+exports.sub = function(config, query, callback) {
     config = setConf(config);
-    subscribe(config, callback);
+    subscribe(config, query, callback);
 }
 
 exports.ws = function(config, callback) {
