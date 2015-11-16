@@ -6,6 +6,7 @@ var websocket = require(__dirname+'/lib/websocket.js');
 var defaultConf = {
     protocol: "http",
     selfSignedCert: false,
+    verbose: false,
     host: "localhost",
     port: 80,
     name: null,
