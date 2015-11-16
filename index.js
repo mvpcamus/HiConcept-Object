@@ -41,12 +41,12 @@ function setConf(config) {
 
 exports.pub = function(config, content, callback) {
     config = setConf(config);
-    publish(config, content, callback);
+    return publish(config, content, callback);
 }
 
 exports.sub = function(config, query, callback) {
     config = setConf(config);
-    subscribe(config, query, callback);
+    return subscribe(config, query, callback);
 }
 
 exports.ws = function(config, callback) {
