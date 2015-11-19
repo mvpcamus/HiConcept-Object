@@ -1,6 +1,6 @@
 {
     "name" : "HiConcept-Object",
-    "version" : "0.0.3",
+    "version" : "0.1.0",
     "description" : "HiConcept Context Management Framework Object Adapter",
     "author" : {
         "name" : "Jun Jo",
@@ -13,7 +13,7 @@
         }
     ],
     "dependencies" : {
-        "ws" : ">=0.8.0"
+        "ws" : "=0.8.x"
     },
     "main" : "index",
     "files" : [
@@ -22,9 +22,9 @@
         "index.js",
         "lib/"
     ],
+    "directories" : [],
     "engines" : {
-        "node" : ">= 0.12.7"
+        "node" : ">= 4.2.2"
     },
-    "directories" : {},
     "readme" : "README.md"
 }
